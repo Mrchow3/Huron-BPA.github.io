@@ -13,7 +13,7 @@
     <link href="/css/main.css" rel='stylesheet'>
     <!-- Include this on every page -->
     <script>
-        $.get("/more/sources.txt", function(data) {
+        $.get("/other/sources.txt", function(data) {
             let urls = data.split("\n").filter(function(val, index) {
                 return val !== ""
             })
@@ -26,8 +26,6 @@
             }
         })
         function addCitationToPage(data) {
-            // “2017 Ford Fusion SE Hybrid.” Friendly TLC Rentals and Leasing, Friendly,
-            // www.friendlytlc.com / vehicle / fleet /.
             console.log(data)
             // yes i am lazier than you
             let url = `"${data.title}." <i> ${data.websiteTitle || ""}</i>, ${data.creators[0].lastName == "author" ? "" : data.creators[0].lastName + ","} ${data.date ? data.date + "," : ""} <a href="${data.url}" target="_blank"> ${data.url} </a>`
@@ -38,12 +36,12 @@
 </head>
 
 <body>
-    <header data-load="header.html">
+    <header data-load="templates/header.html">
     </header>
     <div class="container">
-        <ul class="citations">
+        <div class="citations">
 
-        </ul>
+        </div>
     </div>
 </body>
 
