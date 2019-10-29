@@ -11,6 +11,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="/js/include.js"></script>
     <link href="/css/main.css" rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/3aa210e078.js" crossorigin="anonymous"></script>
     <!-- Include this on every page -->
     <title>Document</title>
 </head>
@@ -19,29 +20,27 @@
     <header data-load="templates/header.html">
     </header>
     <div class="container">
-        <div id="epa"><h1>EPA</h1></div>
-        <p>text<br>text</p>
-        <p>text<br>text</p>
-        <p>text<br>text</p>
-        <p>text<br>text</p>
-        <p>text<br>text</p>
-        <p>text<br>text</p>
-        <p>text<br>text</p>
-        <p>text<br>text</p>
-        <p>text<br>text</p>
-        <p>text<br>text</p>
-        <p>text<br>text</p>
-        <p>text<br>text</p>
-        <p>text<br>text</p>
-        <p>text<br>text</p>
-        <p>text<br>text</p>
-        <p>text<br>text</p>
-        <p>text<br>text</p>
-        <p>text<br>text</p>
-        <p>text<br>text</p>
-        <div id="zoning"><h1>Zoning</h1></div>
-        <div id="associations"><h1>associations</h1></div>
-        <div id="permits"><h1>permits</h1></div>
+        <div class="nav nav-tabs">
+            <a data-toggle="tab" class="nav-link nav-item active" href="#epa">EPA</a>
+            <a data-toggle="tab" class="nav-link" href="#zoning">Zoning</a>
+            <a data-toggle="tab" class="nav-link" href="#associations">Homeowners Associations</a>
+            <a data-toggle="tab" class="nav-link" href="#permits">Permits</a>
+        </div>
+        <div class="tab-content">
+
+            <div class="tab-pane fade show active" id="epa">
+                <h1> EPA </h1>
+            </div>
+            <div class="tab-pane fade show" id="zoning">
+                <h1>Zoning</h1>
+            </div>
+            <div class="tab-pane fade show" id="associations">
+                <h1>associations</h1>
+            </div>
+            <div class="tab-pane fade show" id="permits">
+                <h1>permits</h1>
+            </div>
+        </div>
     </div>
     <footer class="footer" data-load="templates/footer.html"></footer>
 

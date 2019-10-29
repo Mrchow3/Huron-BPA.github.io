@@ -11,6 +11,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="/js/include.js"></script>
     <link href="/css/main.css" rel='stylesheet'>
+    <script src="https://momentjs.com/downloads/moment.js"></script>
     <script src="https://kit.fontawesome.com/3aa210e078.js" crossorigin="anonymous"></script>
 
     <!-- Include this on every page -->
@@ -19,22 +20,30 @@
             let urls = data.split("\n").filter(function(val, index) {
                 return val !== ""
             })
-            console.log(urls)
             for (url of urls) {
                 $.post("https://formatically.com/api/website", {"url": url}, function(data) {
                     addCitationToPage(data)
                 })
-                console.log("URL:",url)
             }
         })
         function addCitationToPage(data) {
-            console.log(data)
-            // yes i am lazier than you
-            let url = `"${data.title}." <i> ${data.websiteTitle || ""}</i>, ${data.creators[0].lastName == "author" ? "" : data.creators[0].lastName + ","} ${data.date ? data.date + "," : ""} <a href="${data.url}" target="_blank"> ${data.url} </a>`
-            $(".citations").append(`<p>${url}</p>`)
+            console.log("Processing citation... ", data.url)
+            // Add period if not existing punctuation
+            let period = /!|\.|\?/.test(data.title[data.title.length - 1]) ? "" : "."
+            let rawName = data.creators[0].lastName
+            // Make sure there is a name and no bugs
+            let name = rawName && !rawName.includes("author") ? rawName + ", " : ""
+            // Format date correctly
+            let date = data.date ? moment(data.date, "YYYY-MM-DD").format("MMMM DD YYYY") + "," : ""
+
+            // Add citation
+            let citation = `"${data.title}${period}"
+            <i>${data.websiteTitle ? data.websiteTitle + "," : ""}</i>
+            ${name}${date} <a href="${data.url}" target="_blank"> ${data.url} </a>`
+            $(".citations").append(`<p>${citation}</p>`)
         }
     </script>
-    <title>Document</title>
+    <title>Works Cited</title>
 </head>
 
 <body>

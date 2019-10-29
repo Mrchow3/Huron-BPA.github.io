@@ -1,11 +1,13 @@
-li.dropdown:hover
-    div.dropdown-menu
-        margin: 0
-        display: block
+@media (min-width: 768px)
+    li.dropdown:hover
+        div.dropdown-menu
+            margin: 0
+            display: block    
 body
     position: relative
     min-height: 100vh;
 .container
+    padding-top: 3.5em;
     padding-bottom: 10em; 
 footer
     position: absolute
@@ -14,3 +16,6 @@ footer
     text-align: center
     i
         font-size: 2em
+        color: black
+    i:hover
+        color: white
