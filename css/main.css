@@ -2,4 +2,24 @@ li.dropdown:hover div.dropdown-menu {
   margin: 0;
   display: block;
 }
+
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+.container {
+  padding-bottom: 10em;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+}
+
+footer i {
+  font-size: 2em;
+}
 /*# sourceMappingURL=main.css.map */
