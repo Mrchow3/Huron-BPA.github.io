@@ -19,6 +19,8 @@ footer {
   position: absolute;
   width: 100%;
   bottom: 0;
+  padding-top: 1em;
+  color: black;
   text-align: center;
 }
 
@@ -29,5 +31,11 @@ footer i {
 
 footer i:hover {
   color: white;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.navbar, footer {
+  background: rgba(200, 200, 200, 0.8);
 }
 /*# sourceMappingURL=main.css.map */
