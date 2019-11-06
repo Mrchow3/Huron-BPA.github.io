@@ -5,3 +5,4 @@ https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6a
 https://fontawesome.com/icons
 https://stackoverflow.com/questions/37896484/multiple-conditions-for-javascript-includes-method/37896529
 https://momentjs.com/
+https://mycolor.space/gradient
