@@ -22,6 +22,7 @@ footer {
   padding-top: 1em;
   color: black;
   text-align: center;
+  background: white;
 }
 
 footer i {
@@ -35,7 +36,11 @@ footer i:hover {
   transition: 1s;
 }
 
-.navbar, footer {
+.navbar {
   background: rgba(200, 200, 200, 0.8);
+}
+
+a {
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */

@@ -9,69 +9,75 @@ body {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-.what-is {
-  background: -webkit-gradient(linear, left top, right top, from(#1c1596), to(#00ffcd));
-  background: linear-gradient(90deg, #1c1596 0%, #00ffcd 100%);
+.front-page i, .front-page .content {
   color: white;
 }
 
+.why {
+  background: -webkit-gradient(linear, left top, left bottom, from(#EDE574), to(#E1F5C4));
+  background: linear-gradient(to bottom, #EDE574 0%, #E1F5C4 100%);
+}
+
+.what-is {
+  background: -webkit-gradient(linear, left top, left bottom, from(#E1F5C4), to(blue));
+  background: linear-gradient(to bottom, #E1F5C4 0%, blue 100%);
+}
+
+.build {
+  background: -webkit-gradient(linear, left top, left bottom, from(blue), to(purple));
+  background: linear-gradient(to bottom, blue 0%, purple 100%);
+}
+
 .mega-text {
-  font-size: 5em;
+  font-size: 2em;
   font-weight: 600;
+}
+
+@media (min-width: 786px) {
+  .mega-text {
+    font-size: 3em;
+  }
+}
+
+.full-screen {
+  min-height: 100vh;
 }
 
 .center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 100vh;
 }
 
 .content {
   background: rgba(66, 65, 65, 0.89);
   padding: 1em;
   border-radius: .5em;
-  color: white;
-}
-
-@media (max-width: 768px) {
-  .info {
-    display: none;
-  }
 }
 
 .info {
-  color: white;
-  padding: 1em;
-  position: absolute;
-  bottom: 20%;
-  left: 50%;
-  font-size: 1em;
-}
-
-.info i {
-  color: white;
+  padding-top: 20%;
+  border-radius: 1em;
+  font-size: 3em;
 }
 
 .info:hover {
-  background: white;
-  color: black;
   cursor: pointer;
-  -webkit-transition: 1s;
-  transition: 1s;
 }
 
-.info:hover i {
-  color: black;
-  -webkit-transition: 1s;
-  transition: 1s;
+.jumbotron {
+  background: white;
 }
 /*# sourceMappingURL=index.css.map */
