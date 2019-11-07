@@ -17,10 +17,6 @@ body {
   color: white;
 }
 
-.what-is img {
-  border-radius: 30px;
-}
-
 .mega-text {
   font-size: 5em;
   font-weight: 600;
@@ -54,11 +50,10 @@ body {
 
 .info {
   color: white;
-  border: 5px white solid;
   padding: 1em;
   position: absolute;
-  top: 20%;
-  left: 70%;
+  bottom: 20%;
+  left: 50%;
   font-size: 1em;
 }
 
