@@ -11,22 +11,108 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="/js/include.js"></script>
     <link href="/css/main.css" rel='stylesheet'>
+    <link href="/css/why.css" rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/3aa210e078.js" crossorigin="anonymous"></script>
     <!-- Include this on every page -->
     <title>Document</title>
 </head>
 
 <body>
-    <div data-load="templates/header.html">
+    <header data-load="templates/header.html">
 
-    </div>
-    <div class="container">
-        <p> Why bio? idk </p>
-        <h1> Benefits </h1>
-        <p> text</p>
-        <h1> Environmental Impact </h1>
-        <p> text</p>
-        <h1> Support Groups </h1>
-        <p> text</p>
+    </header>
+    <div class="d-flex">
+        <div class="container sidebar">
+            <div class="row">
+
+                <div class="col-auto">
+
+                    <h3>Why Biohomes?</h3>
+                    <div class="list-group list-group-flush">
+
+                        <a class="list-group-item list-group-item-action" href="#benefits">Benefits</a>
+                        <a class="list-group-item list-group-item-action" href="#impact">Impact</a>
+                        <a class="list-group-item list-group-item-action" href="#support">Support</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container justify-content-center main">
+
+            <div class="row" id="benefits">
+                <div class="col-6">
+                    <h1> Benefits of Biohomes</h1>
+                    <p> fsdhfdsfhds fkjsdhfsdkfhsdkjfsdh fkdsjhfsdkjfhsdjkfs dhfjksdhfdskj fhsdkj
+                        dfhdskfhsd</p>
+                </div>
+                <div class="col-6 mt-2">
+                    <div class="d-flex flex-column">
+                        <div class="d-flex flex-row">
+                            <div class="num mr-3 mb-2">1</div> Item X
+                        </div>
+                        <div class="d-flex flex-row">
+                            <div class="num mr-3 mb-2">2</div> Item X
+                        </div>
+                        <div class="d-flex flex-row">
+                            <div class="num mr-3 mb-2">3</div> Item X
+                        </div>
+                        <div class="d-flex flex-row">
+                            <div class="num mr-3 mb-2">4</div> Item X
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-column" id="impact">
+
+                <h1> Reduced Environmental Impact </h1>
+                <p> Lorem Ipsum </p>
+            </div>
+            <div class="row">
+
+                <div class="col"><i class="far fa-check-circle"></i>
+                    <h1 class="d-inline">text</h1>
+                    <p> Small text</p>
+                </div>
+                <div class="col"><i class="far fa-check-circle"></i>
+
+                </div>
+                <div class="w-100"></div>
+                <div class="col"><i class="far fa-check-circle"></i>
+
+                </div>
+                <div class="col"><i class="far fa-check-circle"></i>
+
+                </div>
+            </div>
+            <div class="d-flex flex-column" id="support">
+                <h1> Support Groups for Biohomes </h1>
+                <p> Lorem Ipsum </p>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <img src="/assets/placeholder.png">
+                </div>
+                <div class="col">
+                    <h1> NICE </h1>
+                    <p> nice </p>
+                    <a class="btn btn-lg btn-primary">Read More</a>
+
+                </div>
+            </div>
+            <div class="row mt-3">
+
+                <div class="col">
+                    <h1> NICE </h1>
+                    <p> nice </p>
+                    <a class="btn btn-lg btn-primary">Read More</a>
+
+                </div>
+                <div class="col">
+                    <img src="/assets/placeholder.png">
+                </div>
+            </div>
+        </div>
     </div>
     <footer class="footer" data-load="templates/footer.html"></footer>
 </body>

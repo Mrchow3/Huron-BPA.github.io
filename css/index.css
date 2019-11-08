@@ -42,23 +42,10 @@ body {
   font-weight: 600;
 }
 
-@media (min-width: 786px) {
+@media (min-width: 768px) {
   .mega-text {
     font-size: 3em;
   }
-}
-
-.full-screen {
-  min-height: 100vh;
-}
-
-.center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .content {
