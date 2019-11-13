@@ -11,6 +11,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="/js/include.js"></script>
     <link href="/css/main.css" rel='stylesheet'>
+    <link href="/css/challenges.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3aa210e078.js" crossorigin="anonymous"></script>
     <!-- Include this on every page -->
     <title>Challenges</title>
@@ -19,36 +20,57 @@
 <body>
     <header data-load="templates/header.html">
     </header>
-    <div class="container">
-        <div class="nav nav-tabs">
-            <a data-toggle="tab" class="nav-link nav-item active" href="#epa">EPA</a>
-            <a data-toggle="tab" class="nav-link" href="#zoning">Zoning</a>
-            <a data-toggle="tab" class="nav-link" href="#associations">Homeowners Associations</a>
-            <a data-toggle="tab" class="nav-link" href="#tech">Appliances / Technology</a>
-            <a data-toggle="tab" class="nav-link" href="#insurance">Insurance</a>
-            <a data-toggle="tab" class="nav-link" href="#permits">Permits</a>
-        </div>
-        <div class="tab-content">
+    <div
+        class="wind container-fluid front-page background-image d-flex justify-content-center align-items-center text-center">
+        <h1 class="display-4" style="background: white;">Challenges</h1>
+    </div>
+    <div class="container ml-0">
+        <div class="row">
 
-            <div class="tab-pane fade show active" id="epa">
-                <h1> EPA </h1>
-            </div>
-            <div class="tab-pane fade show" id="zoning">
-                <h1>Zoning</h1>
-            </div>
-            <div class="tab-pane fade show" id="associations">
-                <h1>associations</h1>
-            </div>
-            <div class="tab-pane fade show" id="tech">
-                <h1>tech</h1>
-            </div>
-            <div class="tab-pane fade show" id="insurance">
-                <h1>insurance</h1>
-            </div>
-            <div class="tab-pane fade show" id="permits">
-                <h1>permits</h1>
-            </div>
+            <div class="col-md-3 hide-small">
+                <div class="sticky-top top-padding">
 
+                    <h3>Challenges</h3>
+
+                    <div class="list-group list-group-flush">
+                        <a class='list-group-item list-group-item-action' href="#epa">EPA</a>
+                        <a class='list-group-item list-group-item-action' href="#zoning">Zoning</a>
+                        <a class='list-group-item list-group-item-action' href="#associations">Homeowners
+                            Associations</a>
+                        <a class='list-group-item list-group-item-action' href="#tech">Appliances / Technology</a>
+                        <a class='list-group-item list-group-item-action' href="#insurance">Insurance</a>
+                        <a class='list-group-item list-group-item-action' href="#permits">Permits</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div id="epa">
+                    <h1> EPA </h1>
+                </div>
+                <div id="zoning">
+                    <h1>Zoning</h1>
+                </div>
+                <div id="associations">
+                    <h1>associations</h1>
+                </div>
+                <div id="tech">
+                    <h1>tech</h1>
+                </div>
+                <p> hi.<br> hi </p>
+                <p> hi.<br> hi </p>
+                <p> hi.<br> hi </p>
+                <p> hi.<br> hi </p>
+                <p> hi.<br> hi </p>
+                <p> hi.<br> hi </p>
+                <p> hi.<br> hi </p>
+                <p> hi.<br> hi </p>
+                <div id="insurance">
+                    <h1>insurance</h1>
+                </div>
+                <div id="permits">
+                    <h1>permits</h1>
+                </div>
+            </div>
         </div>
     </div>
     <footer class="footer" data-load="templates/footer.html"></footer>

@@ -1,28 +1,28 @@
 .num {
   border: 1px solid black;
-  border-radius: 100%;
+  border-radius: 50%;
   width: 30px;
   height: 30px;
   text-align: center;
 }
 
 i {
-  font-size: 4em;
-  color: magenta;
+  font-size: 2em;
+  color: red;
 }
 
-.sidebar {
-  display: none;
-  position: relative;
+.sticky-top {
+  top: 3.5em;
 }
 
-@media (min-width: 768px) {
-  .sidebar {
-    display: inline;
-    position: fixed;
+@media (max-width: 768px) {
+  .hide-small {
+    display: none;
   }
-  .main {
-    padding-left: 220px;
-  }
+}
+
+.front-page {
+  background-image: url("https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F34%2F2019%2F08%2F12145839%2Feco-friendly-home-getty-0819.jpg&q=25");
+  min-height: 80vh;
 }
 /*# sourceMappingURL=why.css.map */

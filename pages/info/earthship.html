@@ -11,6 +11,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="/js/include.js"></script>
     <link href="/css/main.css" rel='stylesheet'>
+    <link href="/css/info.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3aa210e078.js" crossorigin="anonymous"></script>
 
     <!-- Include this on every page -->
@@ -20,7 +21,30 @@
 <body>
     <header data-load="templates/header.html">
     </header>
-    <div class="container">
+    <div
+        class="earthship container-fluid front-page background-image d-flex justify-content-center align-items-center text-center">
+        <h1 class="display-4" style="background: white;">Earthship homes</h1>
+    </div>
+    <div class="container ml-0">
+        <div class="row">
+
+            <div class="col-md-3 hide-small">
+                <div class="sticky-top top-padding">
+
+                    <h3>Types of biohomes</h3>
+
+                    <div class="list-group list-group-flush">
+
+                        <a class="list-group-item active list-group-item-action" href="earthship.html">Earthship</a>
+                        <a class="list-group-item list-group-item-action" href="geothermal.html">Geothermal</a>
+                        <a class="list-group-item list-group-item-action" href="solar.html">Solar</a>
+                        <a class="list-group-item list-group-item-action" href="wind.html">Wind</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+            </div>
+        </div>
     </div>
     <footer class="footer" data-load="templates/footer.html"></footer>
 
