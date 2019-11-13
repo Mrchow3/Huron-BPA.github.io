@@ -18,19 +18,19 @@ body {
   color: white;
 }
 
-.why {
+.what-is {
   background: -webkit-gradient(linear, left top, left bottom, from(#EDE574), to(#E1F5C4));
   background: linear-gradient(to bottom, #EDE574 0%, #E1F5C4 100%);
 }
 
-.what-is {
-  background: -webkit-gradient(linear, left top, left bottom, from(#E1F5C4), to(blue));
-  background: linear-gradient(to bottom, #E1F5C4 0%, blue 100%);
+.why {
+  background: -webkit-gradient(linear, left top, left bottom, from(#E1F5C4), to(#643333));
+  background: linear-gradient(to bottom, #E1F5C4 0%, #643333 100%);
 }
 
 .build {
-  background: -webkit-gradient(linear, left top, left bottom, from(blue), to(purple));
-  background: linear-gradient(to bottom, blue 0%, purple 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#643333), to(purple));
+  background: linear-gradient(to bottom, #643333 0%, purple 100%);
 }
 
 .mega-text {
