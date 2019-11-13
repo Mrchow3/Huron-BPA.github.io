@@ -1,0 +1,26 @@
+{"filters": {
+    "benefits": [
+        "water heater",
+        "pineapple"
+    ],
+    "constraints": [
+        "gas stove",
+        "popcorn",
+        "aaa"
+    ]
+},
+"types": {
+    "wind": {
+        "water heater": true,
+        "pineapple": false,
+        "gas stove": false,
+        "popcorn": true
+    },
+    "solar": {
+        "water heater": false,
+        "pineapple": false,
+        "gas stove": true,
+        "popcorn": true
+    }
+}
+}

@@ -15,73 +15,82 @@
     <script src="https://kit.fontawesome.com/3aa210e078.js" crossorigin="anonymous"></script>
     <!-- Include this on every page -->
     <title>Huron BPA 2019</title>
-    <style>
-
-    </style>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.js"></script>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.css' rel='stylesheet'>
 </head>
 
 <body>
     <header data-load="templates/header.html"></header>
     <!-- <p> Hi </p> -->
-    <div class="container-fluid min-vh-100 center front-page background-image">
-        <div class="content">
-            <h1 class="display-4">A biofriendy home.</h1>
-            <p class="lead"> Exploring the aspects and challenges of bio-friendly homes.</p>
-        </div>
-        <a class='info' href='#next'><i class="fas fa-arrow-circle-down"></i></a>
-    </div>
+    <div class="fullpage">
+        <div class="section front-page background-image">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <div class="content">
 
-    <!-- what is a biohome -->
-    <div class="min-vh-100 what-is center">
-        <div class="container">
-            <div class="jumbotron">
-
-                <h1> What is a biohome? </h1>
-                <div>
-                    <h2 class="d-inline">BioHome</h2>
-                    <h4 class="d-inline">/bioHome/</h4>
-                </div>
-                <p> <i> Noun </i></p>
-                <p> An Biohome (or eco-home) is an environmentally low-impact home designed and built using materials
-                    and technology that reduces its carbon footprint and lowers its energy needs.</p>
-                <a class="btn btn-lg btn-primary">Read More</a>
-            </div>
-        </div>
-    </div>
-    <!--  why choose a biohome -->
-    <div class="min-vh-100 why center">
-        <div class="container">
-            <div class="jumbotron">
-
-                <div class="row">
-                    <div class="col-md-auto col-md-6">
-                        <img class='rounded img-fluid'
-                            src="https://specials-images.forbesimg.com/imageserve/1026205392/960x0.jpg?fit=scale">
-                    </div>
-
-                    <div class="col col-md-6">
-                        <div class="mega-text"> Why should I choose a biohome? </div>
-                        <p> Biohomes can have several advantages. </p>
-
-                        <a class="btn btn-lg btn-primary mr-3">Benefits</a>
-                        <a class="btn btn-lg btn-outline-primary">Challenges</a>
-                    </div>
+                    <h1 class="display-4">A biofriendy home.</h1>
+                    <p class="lead"> Exploring the aspects and challenges of bio-friendly homes.</p>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- start building a biohome -->
-    <div class="min-vh-100 build center">
-        <div class="container">
-            <div class="jumbotron">
+        <div class="section">
+            <div class="container">
+                <div class="jumbotron">
 
-                <h1> Start planning your future biohome</h1>
-                <br>
-                <a class="btn btn-lg btn-primary" href="/pages/info/planner.html">Build a biohome </a>
+                    <h1> What is a biohome? </h1>
+                    <div>
+                        <h2 class="d-inline">BioHome</h2>
+                        <h4 class="d-inline">/bioHome/</h4>
+                    </div>
+                    <p> <i> Noun </i></p>
+                    <p> An Biohome (or eco-home) is an environmentally low-impact home designed and built using
+                        materials
+                        and technology that reduces its carbon footprint and lowers its energy needs.</p>
+                    <a class="btn btn-lg btn-primary">Read More</a>
+                </div>
             </div>
         </div>
+        <!--  why choose a biohome -->
+        <div class="section">
+            <div class="container">
+                <div class="jumbotron">
+
+                    <div class="row">
+                        <div class="col-md-auto col-md-6">
+                            <img class='rounded img-fluid'
+                                src="https://specials-images.forbesimg.com/imageserve/1026205392/960x0.jpg?fit=scale">
+                        </div>
+
+                        <div class="col col-md-6">
+                            <div class="mega-text"> Why should I choose a biohome? </div>
+                            <p> Biohomes can have several advantages. </p>
+
+                            <a class="btn btn-lg btn-primary mr-3">Benefits</a>
+                            <a class="btn btn-lg btn-outline-primary">Challenges</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- start building a biohome -->
+        <div class="section">
+            <div class="container">
+                <div class="jumbotron">
+
+                    <h1> Start planning your future biohome</h1>
+                    <br>
+                    <a class="btn btn-lg btn-primary" href="/pages/info/planner.html">Build a biohome </a>
+                </div>
+            </div>
+            <footer class="footer" data-load="templates/footer.html"></footer>
+        </div>
     </div>
-    <footer class="footer" data-load="templates/footer.html"></footer>
+    <script>
+        new fullpage('.fullpage', {
+            sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', '#32a852'],
+            navigation: true,
+            navigationPosition: 'right',
+        })
+    </script>
 </body>
 
 </html>
