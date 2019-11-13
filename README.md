@@ -1,7 +1,4 @@
-# 2019-website
-
-+ [Website Design](https://www.figma.com/file/LD4z868GFSGjky5ki2g5aO/Huron-BPA-Web-Team-2019-Design?node-id=0%3A1)
-
+# [2019-website](https://Huron-BPA.github.io)
 
 ### Getting started
 
