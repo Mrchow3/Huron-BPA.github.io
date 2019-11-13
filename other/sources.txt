@@ -9,3 +9,6 @@ https://mycolor.space/gradient
 https://github.com/bevacqua/dragula/blob/master/example/example.js
 https://stackoverflow.com/questions/4861224/how-to-use-css-to-surround-a-number-with-a-circle
 https://stackoverflow.com/questions/49984241/bootstrap-4-navbar-fixed-top-and-other-sticky-top-elements
+https://stackoverflow.com/questions/4197591/parsing-url-hash-fragment-identifier-with-javascript
+https://github.com/alvarotrigo/fullPage.js
+https://underscorejs.org/

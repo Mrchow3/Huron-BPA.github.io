@@ -5,22 +5,28 @@
     ],
     "constraints": [
         "gas stove",
-        "popcorn",
-        "aaa"
+        "popcorn"
     ]
 },
 "types": {
     "wind": {
+        "_score": 0,
         "water heater": true,
         "pineapple": false,
-        "gas stove": false,
-        "popcorn": true
+        "gas stove": false
     },
-    "solar": {
+    "earthship": {
+        "_score": 0,
         "water heater": false,
         "pineapple": false,
         "gas stove": true,
         "popcorn": true
+    },
+    "solar": {
+        "_score": 0
+    },
+    "geothermal": {
+        "_score": 0
     }
 }
 }

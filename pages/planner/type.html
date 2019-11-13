@@ -11,19 +11,54 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="/js/include.js"></script>
     <link href="/css/main.css" rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
     <script src="https://kit.fontawesome.com/3aa210e078.js" crossorigin="anonymous"></script>
     <!-- Include this on every page -->
     <script>
+        allValues = {}
+        scores = {}
         $.getJSON("/other/types.json", function (data) {
             for (let benefit of data.filters.benefits) {
                 $('.benefits').append(
-                    `<input type="checkbox"> ${benefit}<br>`
+                    `<input type="checkbox" value="${benefit}"> ${benefit}<br>`
                 )
             }
             for (let constraint of data.filters.constraints) {
                 $('.constraints').append(
-                    `<input type="checkbox"> ${constraint}<br>`
-                )     
+                    `<input type="checkbox" value="${constraint}"> ${constraint}<br>`
+                )
+            }
+            allValues = data.types
+        })
+        $(document).on('change', 'input[type="checkbox"]', function (e) {
+            // console.log(e.target.checked, e.target.value)
+            let clean_val = e.target.value.replace(/ |\./,'_')
+            if (e.target.checked) {
+                let scores = []
+                $('.card').each((i, elem) => {
+                    let kind = _.filter(elem.classList, (v, _ ) => v !== "card")[0]
+                    elem = $(elem).find('.filters')
+                    console.log(elem)
+                    let mode = '<i class="fas fa-minus"></i>'
+                    if (e.target.value in allValues[kind]) {
+                        mode = allValues[kind][e.target.value] ? '<i class="fas fa-check"></i>' : '<i class="fas fa-times"></i>'
+                        allValues[kind]._score += allValues[kind][e.target.value] ? 1 : -1
+                    }
+                    scores.push({'score': allValues[kind]._score, 'selector': '.' + kind})
+                    
+                    $(elem).append(`<p class="${clean_val}"> ${mode} ${e.target.value}</p>`)
+                    // console.log(kind)
+                })
+                let sortedScores = _.sortBy(scores, 'score').reverse()
+                console.log(sortedScores)
+                $('.badge').html('')
+                $(` ${sortedScores[0].selector} .badge-wrapper`).html('<span class="badge badge-primary">Best choice</span>')
+                $(` ${sortedScores[1].selector} .badge-wrapper`).html('<span class="badge badge-secondary">Runner up</span>')
+                // $('.filters').append(`<p class="${clean_val}">${e.target.value}</p>`)
+                // add to all cards
+            } else {
+                // remove from all cards
+                $(`.${clean_val}`).remove()
             }
         })
     </script>
@@ -38,59 +73,68 @@
             First, lets determine the type of biohome that might be right for you.
             Use the filters below to highlight what may be right for you.
         </div>
-        <div class="row">
+        <div class="row filter">
             <div class="col benefits">
-                <h3> Benefits </h3>
+                <h3> Features </h3>
             </div>
             <div class="col constraints">
-                    <h3> Challenges </h3>
+                <h3> Constraints </h3>
 
             </div>
-            <!-- <input type="checkbox"> Point A<br>
-            <input type="checkbox"> Point B<br>
-            <input type="checkbox"> Point C<br>
-            <input type="checkbox"> Point D<br> -->
         </div>
         <div class="row mt-5">
             <div class="col-md">
-                <div class="card"><img class="card-img-top" src="https://static.onecms.io/wp-content/uploads/sites/34/2019/08/12145839/eco-friendly-home-getty-0819.jpg">
-                <div class="card-body">
-                    <h5 class="card-title">A</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class='wind'>
+                <div class="card wind">
+<img class="card-img-top"
+                        src="https://static.onecms.io/wp-content/uploads/sites/34/2019/08/12145839/eco-friendly-home-getty-0819.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title">Wind <span class="badge-wrapper"></span></h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <div class='filters'>
+                        </div>
+                        <a href="#" class="btn btn-primary">Select this design</a>
                     </div>
-                    <a href="#" class="btn btn-primary">Select this design</a>
-                </div></div>
+                </div>
             </div>
             <div class="col-md">
-                <div class="card"><img class="card-img-top" src="https://static.onecms.io/wp-content/uploads/sites/34/2019/08/12145839/eco-friendly-home-getty-0819.jpg">
-                <div class="card-body">
-                    <h5 class="card-title">B</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class='earthship'>
+                <div class="card earthship"><img class="card-img-top"
+                        src="https://static.onecms.io/wp-content/uploads/sites/34/2019/08/12145839/eco-friendly-home-getty-0819.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title">Earthship <span class="badge-wrapper"></span></h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <div class='filters'>
+                        </div>
+                        <a href="#" class="btn btn-primary">Select this design</a>
                     </div>
-                    <a href="#" class="btn btn-primary">Select this design</a>
-                </div></div>
+                </div>
             </div>
             <div class="col-md">
-                <div class="card"><img class="card-img-top" src="https://static.onecms.io/wp-content/uploads/sites/34/2019/08/12145839/eco-friendly-home-getty-0819.jpg">
-                <div class="card-body">
-                    <h5 class="card-title">C</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Select this design</a>
-                    <div class='earthship'>
+                <div class="card solar"><img class="card-img-top"
+                        src="https://static.onecms.io/wp-content/uploads/sites/34/2019/08/12145839/eco-friendly-home-getty-0819.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title">Solar <span class="badge-wrapper"></span></h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                            <div class='filters'>
+                            </div>
+                            <a href="#" class="btn btn-primary">Select this design</a>
                     </div>
-                </div></div>
+                </div>
             </div>
             <div class="col-md">
-                <div class="card"><img class="card-img-top" src="https://static.onecms.io/wp-content/uploads/sites/34/2019/08/12145839/eco-friendly-home-getty-0819.jpg">
-                <div class="card-body">
-                    <h5 class="card-title">D</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Select this design</a>
-                    <div class='earthship'>
-                    </div>
-                </div></div>
+                <div class="card geothermal"><img class="card-img-top"
+                        src="https://static.onecms.io/wp-content/uploads/sites/34/2019/08/12145839/eco-friendly-home-getty-0819.jpg">
+                    <di5 class="card-body">
+                        <h5 class="card-title">Geothermal <span class="badge-wrapper"></span></h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                            <div class='filters'>
+                            </div>
+                            <a href="#" class="btn btn-primary">Select this design</a>
+                    </>
+                </div>
             </div>
         </div>
     </div>
