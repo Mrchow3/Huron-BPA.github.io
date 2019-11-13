@@ -37,13 +37,14 @@
                 let scores = []
                 $('.card').each((i, elem) => {
                     let kind = _.filter(elem.classList, (v, _) => v !== "card")[0]
+
                     elem = $(elem).find('.filters')
                     console.log(elem)
                     let mode = '<i class="fas fa-minus"></i>'
                     if (e.target.value in allValues[kind]) {
                         mode = allValues[kind][e.target.value] ? '<i class="fas fa-check"></i>' :
                             '<i class="fas fa-times"></i>'
-                        allValues[kind]._score += allValues[kind][e.target.value] ? 1.01 : -1.01 
+                        allValues[kind]._score += allValues[kind][e.target.value] ? 1.01 : -1.01
                         // rank higher than nothing
                     }
                     scores.push({
@@ -52,20 +53,25 @@
                     })
 
                     $(elem).append(`<p class="${clean_val}"> ${mode} ${e.target.value}</p>`)
-                    // console.log(kind)
                 })
+                // add badge to highest ranking
                 let sortedScores = _.sortBy(scores, 'score').reverse()
-                console.log(sortedScores)
-                $('.badge').html('')
+                $('.badge').html()
                 $(` ${sortedScores[0].selector} .badge-wrapper`).html(
                     '<span class="badge badge-primary">Best choice</span>')
                 $(` ${sortedScores[1].selector} .badge-wrapper`).html(
                     '<span class="badge badge-secondary">Runner up</span>')
-                // $('.filters').append(`<p class="${clean_val}">${e.target.value}</p>`)
-                // add to all cards
+                return
             } else {
-                // remove from all cards
+
                 $(`.${clean_val}`).remove()
+                // subtract score of element when it is unchecked
+                $('.card').each((i, elem) => {
+                    let kind = _.filter(elem.classList, (v, _) => v !== "card")[0]
+                    if (e.target.value in allValues[kind]) {
+                        allValues[kind]._score -= allValues[kind][e.target.value] ? 1.01 : -1.01
+                    }
+                })
             }
         })
     </script>
