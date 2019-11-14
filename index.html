@@ -10,7 +10,8 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <link href='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.css' rel='stylesheet'>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.js">
+    </script>
     <script src="https://kit.fontawesome.com/3aa210e078.js" crossorigin="anonymous"></script>
     <link href="/css/main.css" rel='stylesheet'>
     <script src="/js/include.js"></script>
@@ -45,8 +46,8 @@
                     <p> An Biohome (or eco-home) is an environmentally low-impact home designed and built using
                         materials
                         and technology that reduces its carbon footprint and lowers its energy needs.</p>
-                    <a class="btn btn-lg btn-primary" href="/pages/info/solar.html">Types</a>
-                    <a class="btn btn-lg btn-outline-primary" href="/pages/planner/features.html">Features</a>
+                    <!-- <a class="btn btn-lg btn-primary" href="/pages/info/solar.html">Types</a> -->
+                    <a class="btn btn-lg btn-primary" href="/pages/planner/features.html">Features</a>
                 </div>
             </div>
         </div>
@@ -57,7 +58,7 @@
 
                     <div class="row">
                         <div class="col-md-auto col-md-6">
-                            <img class='rounded img-fluid'
+                            <img class=' img-fluid'
                                 src="https://specials-images.forbesimg.com/imageserve/1026205392/960x0.jpg?fit=scale">
                         </div>
 
@@ -70,6 +71,75 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <!-- Types of biohomes -->
+        <div class="section">
+                <div class="container">
+                    <h2 class="mb-2 text-align-center text-center"> Types of biohomes </h2>
+                    <div id="typeCarousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#typeCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#typeCarousel" data-slide-to="1"></li>
+                            <li data-target="#typeCarousel" data-slide-to="2"></li>
+                            <li data-target="#typeCarousel" data-slide-to="3"></li>
+                        </ol>
+                        <div class="carousel-inner rounded">
+                            <div class="carousel-item active">
+                                <img
+                                class="d-block w-100"
+                                src="https://pmcvariety.files.wordpress.com/2018/07/bradybunchhouse_sc11.jpg">
+                                <div class="carousel-header">
+                                    <h3>Wind-powered homes</h3>
+                                </div>
+                                <div class="carousel-caption d-block">
+                                    <!-- <div width=300 class="background-image mypic"></div> -->
+                                    <a class="btn btn-primary" href="/pages/info/wind.html"> Read more </a>
+                                    
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img
+                                class="d-block w-100"
+                                src="https://pmcvariety.files.wordpress.com/2018/07/bradybunchhouse_sc11.jpg">
+                                <div class="carousel-header">
+                                    <h3>Solar-powered homes</h3>
+                                </div>
+                                <div class="carousel-caption d-block">
+                                    <a class="btn btn-primary" href="/pages/info/solar.html"> Read more </a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img
+                                class="d-block w-100"
+                                src="https://pmcvariety.files.wordpress.com/2018/07/bradybunchhouse_sc11.jpg">
+                                <div class="carousel-header">
+                                    <h3>Earthship homes</h3>
+                                </div>
+                                <div class="carousel-caption d-block">
+                                    <a class="btn btn-primary" href="/pages/info/earthship.html"> Read more </a>
+                                    
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                            <img
+                            class="d-block w-100"
+                            src="https://pmcvariety.files.wordpress.com/2018/07/bradybunchhouse_sc11.jpg">
+                            <div class="carousel-header">
+                                <h3>Geothermal homes</h3>
+                            </div>
+                            <div class="carousel-caption d-block">
+                                <a class="btn btn-primary" href="/pages/info/geothermal.html"> Read more </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#typeCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#typeCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+            </div>
             </div>
         </div>
         <!-- start building a biohome -->
@@ -87,9 +157,10 @@
     </div>
     <script>
         new fullpage('.fullpage', {
-            sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', '#32a852'],
+            sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'lightblue', 'pink'],
             navigation: true,
             navigationPosition: 'right',
+            slideSelector: '.fullpageSlide'
         })
     </script>
 </body>

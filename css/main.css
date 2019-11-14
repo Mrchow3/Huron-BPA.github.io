@@ -34,7 +34,7 @@ footer i {
 }
 
 footer i:hover {
-  color: white;
+  color: purple;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -65,11 +65,5 @@ a {
 
 .sticky-top {
   top: 3.5em;
-}
-
-@media (max-width: 768px) {
-  .hide-small {
-    display: none;
-  }
 }
 /*# sourceMappingURL=main.css.map */

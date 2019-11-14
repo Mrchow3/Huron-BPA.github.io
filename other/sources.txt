@@ -12,3 +12,4 @@ https://stackoverflow.com/questions/49984241/bootstrap-4-navbar-fixed-top-and-ot
 https://stackoverflow.com/questions/4197591/parsing-url-hash-fragment-identifier-with-javascript
 https://github.com/alvarotrigo/fullPage.js
 https://underscorejs.org/
+https://dev.to/teamxenox/how-to-make-dynamic-text-overlays-on-images-dcc

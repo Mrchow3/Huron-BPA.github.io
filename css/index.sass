@@ -17,3 +17,22 @@
     // color: white
 #fp-nav ul li a span
     background: white
+.carousel-header
+    position: absolute
+    bottom: 80%
+    left: 0%
+    width: 100%
+    // color: black
+    // interesting solution
+    // https://dev.to/teamxenox/how-to-make-dynamic-text-overlays-on-images-dcc
+    background: inherit;
+    background-clip: text;
+    // color: transparent;
+    // filter: invert(1) grayscale(1) contrast(9);
+    text-align: center
+    z-index: 20 // higher than 10
+.rounded-corner
+    border-radius: 3em
+.colortest
+    background: pink
+//   text-shadow: 0 1px 2px rgba(0,0,0,.6)

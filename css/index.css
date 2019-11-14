@@ -26,4 +26,23 @@
 #fp-nav ul li a span {
   background: white;
 }
+
+.carousel-header {
+  position: absolute;
+  bottom: 80%;
+  left: 0%;
+  width: 100%;
+  background: inherit;
+  background-clip: text;
+  text-align: center;
+  z-index: 20;
+}
+
+.rounded-corner {
+  border-radius: 3em;
+}
+
+.colortest {
+  background: pink;
+}
 /*# sourceMappingURL=index.css.map */

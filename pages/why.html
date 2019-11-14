@@ -21,19 +21,20 @@
     <header data-load="templates/header.html">
 
     </header>
-    <div class="container-fluid front-page background-image d-flex justify-content-center align-items-center text-center">
-        <h1 class="display-4" style="background: white;">Why choose a biohome?</h1>
+    <div
+        class="container-fluid front-page background-image d-flex justify-content-center align-items-center text-center">
+        <h1 class="display-4" style="background: white">Why choose a biohome?</h1>
     </div>
-    <div class="container ml-0">
+    <div class="container-fluid mb">
         <div class="row">
 
-            <div class="col-md-3 hide-small">
+            <div class="col-md-3 d-none d-md-block">
                 <div class="sticky-top top-padding">
 
                     <h3>Why Biohomes?</h3>
-                    
+
                     <div class="list-group list-group-flush">
-                        
+
                         <a class="list-group-item list-group-item-action" href="#benefits">Benefits</a>
                         <a class="list-group-item list-group-item-action" href="#impact">Impact</a>
                         <a class="list-group-item list-group-item-action" href="#support">Support</a>
@@ -47,7 +48,14 @@
                     <div class="col-6">
                         <p> fsdhfdsfhds fkjsdhfsdkfhsdkjfsdh fkdsjhfsdkjfhsdjkfs dhfjksdhfdskj fhsdkj
                             dfhdskfhsd</p>
-                        <a class="btn btn-primary mb-2" href="/pages/info/solar.html">Explore types</a>
+                        <button class="btn btn-primary mb-2 dropdown-toggle" data-toggle="dropdown">Explore
+                            types</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/pages/info/solar.html">Solar</a>
+                            <a class="dropdown-item" href="/pages/info/wind.html">Wind</a>
+                            <a class="dropdown-item" href="/pages/info/geothermal.html">Geothermal</a>
+                            <a class="dropdown-item" href="/pages/info/earthship.html">Earthship</a>
+                        </div>
                         <a class="btn btn-primary mb-2" href="/pages/planner/type.html">Start building</a>
                     </div>
                     <div class="col-6 mt-2">
@@ -67,7 +75,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex flex-column" id="impact">
+                <div class="row d-flex flex-column" id="impact">
 
                     <h1> Reduced Environmental Impact </h1>
                     <p> Lorem Ipsum </p>
@@ -92,7 +100,7 @@
                         <p> Small text</p>
                     </div>
                 </div>
-                <div class="d-flex flex-column" id="support">
+                <div class="row d-flex flex-column" id="support">
                     <h1> Support Groups for Biohomes </h1>
                     <p> Lorem Ipsum </p>
                 </div>
@@ -101,7 +109,7 @@
                         <img src="/assets/placeholder.png">
                     </div>
                     <div class="col">
-                        <h1> NICE </h1>
+                        <h1> support group a </h1>
                         <p> nice </p>
                         <a class="btn btn-lg btn-primary" href="#">Read More</a>
 
@@ -121,7 +129,8 @@
                 </div>
             </div>
         </div>
-        <footer class="footer" data-load="templates/footer.html"></footer>
+    </div>
+    <footer class="footer" data-load="templates/footer.html"></footer>
 </body>
 
 </html>

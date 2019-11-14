@@ -10,8 +10,8 @@ body
     position: relative
     min-height: 100vh;
 .container
-    padding-top: 3.5em;
-    padding-bottom: 10em; 
+    padding-top: 3.5em // so it doesn't hit nav bar
+    padding-bottom: 10em // so it doesn't hit footer
 footer
     position: absolute
     width: 100%
@@ -24,7 +24,7 @@ footer
         font-size: 2em
         color: black
     i:hover
-        color: white
+        color: purple
         transition: 1s
 .navbar
     background: rgb(200, 200, 200)
@@ -43,6 +43,3 @@ a
     background-size: cover
 .sticky-top
     top: 3.5em
-@media (max-width: 768px)
-    .hide-small
-        display: none
