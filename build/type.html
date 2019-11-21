@@ -34,48 +34,52 @@
             // console.log(e.target.checked, e.target.value)
             let clean_val = e.target.value.replace(/ |\./, '_')
             if (e.target.checked) {
-                let scores = []
                 $('.card').each((i, elem) => {
                     let kind = _.filter(elem.classList, (v, _) => v !== "card")[0]
 
                     elem = $(elem).find('.filters')
-                    console.log(elem)
                     let mode = '<i class="fas fa-minus"></i>'
-                    if (e.target.value in allValues[kind]) {
-                        mode = allValues[kind][e.target.value] ? '<i class="fas fa-check"></i>' :
-                            '<i class="fas fa-times"></i>'
-                        allValues[kind]._score += allValues[kind][e.target.value] ? 1.01 : -1.01
-                        // rank higher than nothing
+                    let targets = _.pick(allValues[kind], e.target.value)
+                    if (!_.isEmpty(targets)) {
+                        _.each(targets, function (val) {
+                            mode = allValues[kind][val] ? '<i class="fas fa-check"></i>' :
+                                '<i class="fas fa-times"></i>'
+                            $(elem).append(
+                                `<p class="${clean_val}"> ${mode} ${e.target.value}</p>`)
+                            allValues[kind]._score += allValues[kind][val] ? 1 : -1
+                        })
+                    } else {
+                        $(elem).append(
+                            `<p class="${clean_val}"> <i class="fas fa-minus"></i> ${e.target.value}</p>`
+                            )
                     }
-                    scores.push({
-                        'score': allValues[kind]._score,
-                        'selector': '.' + kind
-                    })
-
-                    $(elem).append(`<p class="${clean_val}"> ${mode} ${e.target.value}</p>`)
                 })
                 // add badge to highest ranking
-                let sortedScores = _.sortBy(scores, 'score').reverse()
-                $('.badge').html()
-                $(` ${sortedScores[0].selector} .badge-wrapper`).html(
-                    '<span class="badge badge-primary">Best choice</span>')
-                $(` ${sortedScores[1].selector} .badge-wrapper`).html(
-                    '<span class="badge badge-secondary">Runner up</span>')
-                return
             } else {
 
                 $(`.${clean_val}`).remove()
+                // $('.badge-wrapper').html('')
                 // subtract score of element when it is unchecked
                 $('.card').each((i, elem) => {
                     let kind = _.filter(elem.classList, (v, _) => v !== "card")[0]
                     if (e.target.value in allValues[kind]) {
-                        allValues[kind]._score -= allValues[kind][e.target.value] ? 1.01 : -1.01
+                        allValues[kind]._score -= allValues[kind][e.target.value] ? 1 : -1
                     }
                 })
             }
+            // add badge
+            let sortedScores = _.sortBy(_.pairs(allValues), function (v) {
+                return v[1]._score
+            }).reverse()
+            $('.badge').empty()
+            console.log(`.${sortedScores[0][0]} .badge-wrapper`)
+            $(`.${sortedScores[0][0]} .badge-wrapper`).html(
+                '<span class="badge badge-primary">Best choice</span>')
+            $(`.${sortedScores[1][0]} .badge-wrapper`).html(
+                '<span class="badge badge-secondary">Runner up</span>')
         })
     </script>
-    <title>Document</title>
+    <title>Types of biohomes</title>
 </head>
 
 <body>
@@ -96,7 +100,10 @@
             </div>
         </div>
         <div class="row mt-5 mb-5">
-            <div class="col-md">
+            <div class="col">
+
+            <div class="card-deck">
+
                 <div class="card wind">
                     <img class="card-img-top"
                         src="https://static.onecms.io/wp-content/uploads/sites/34/2019/08/12145839/eco-friendly-home-getty-0819.jpg">
@@ -109,8 +116,6 @@
                         <a href="#" class="btn btn-primary">Select this design</a>
                     </div>
                 </div>
-            </div>
-            <div class="col-md">
                 <div class="card earthship"><img class="card-img-top"
                         src="https://static.onecms.io/wp-content/uploads/sites/34/2019/08/12145839/eco-friendly-home-getty-0819.jpg">
                     <div class="card-body">
@@ -122,8 +127,6 @@
                         <a href="#" class="btn btn-primary">Select this design</a>
                     </div>
                 </div>
-            </div>
-            <div class="col-md">
                 <div class="card solar"><img class="card-img-top"
                         src="https://static.onecms.io/wp-content/uploads/sites/34/2019/08/12145839/eco-friendly-home-getty-0819.jpg">
                     <div class="card-body">
@@ -135,8 +138,6 @@
                         <a href="#" class="btn btn-primary">Select this design</a>
                     </div>
                 </div>
-            </div>
-            <div class="col-md">
                 <div class="card geothermal"><img class="card-img-top"
                         src="https://static.onecms.io/wp-content/uploads/sites/34/2019/08/12145839/eco-friendly-home-getty-0819.jpg">
                     <div class="card-body">
@@ -149,6 +150,8 @@
                     </div>
                 </div>
             </div>
+            </div>
+
         </div>
     </div>
     <footer class="footer" data-load="templates/footer.html"></footer>

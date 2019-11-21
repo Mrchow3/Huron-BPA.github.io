@@ -1,0 +1,6 @@
+.btn .disabled {
+  pointer-event: none;
+  cursor: not-allowed;
+  background: grey;
+}
+/*# sourceMappingURL=features.css.map */
