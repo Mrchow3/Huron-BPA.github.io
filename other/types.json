@@ -9,7 +9,7 @@
     ]
 },
 "types": {
-    "wind": {
+    "biophilic": {
         "_score": 0,
         "water heater": true,
         "pineapple": false,
@@ -22,10 +22,10 @@
         "gas stove": true,
         "popcorn": true
     },
-    "solar": {
+    "neutral": {
         "_score": 0
     },
-    "geothermal": {
+    "prefab": {
         "_score": 0
     }
 }

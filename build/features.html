@@ -16,20 +16,11 @@
     <title>Document</title>
     <script>
         // get url fragment
-        console.log(window.location.hash)
-        if (window.location.hash.length > 1) {
-            // enable building mode
-        }
-        $(document).ready(function () {
-
-            $('input[name="mode"]').change(function () {
-                if (this.value == 'build') {
-                    $('.kind-selector').toggleClass('d-none')
-                    $('.card-body').append('<button class="btn btn-primary">Add</button>')
-                }
-
-            })
-        })
+        // This comes later
+        // console.log(window.location.hash)
+        // if (window.location.hash.length > 1) {
+        //     // enable building mode
+        // }
     </script>
     <link href="/css/features.css" href='stylesheet'>
     </link>
@@ -38,39 +29,21 @@
 <body>
     <header data-load="templates/header.html">
     </header>
+    <div style="min-height: 80vh"
+        class="container-fluid front-page background-image d-flex justify-content-center align-items-center text-center">
+        <h1 class="display-4">Features</h1>
+    </div>
     <div class="container">
-        <div class="row">
-            <div class="col">
-
-                <h5 class="d-inline"> Select Mode: </h5>
-                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                    <label class="int-on btn btn-primary">
-                        <input type="radio" value="inter" name="mode"> Interactive
-                    </label>
-                    <label class=" btn btn-primary">
-                        <input type="radio" value="card" name="mode"> View
-                    </label>
-                    <label class="btn btn-primary">
-                        <input type="radio" value="build" name="mode"> Build
-                    </label>
-                </div>
-                <div class="kind-selector d-none mt-2">
-
-                    <h5 class="d-inline"> Select Type: </h5>
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="int-on btn btn-primary">
-                            <input type="radio" value=true name="kind"> A
-                        </label>
-                        <label class=" btn btn-primary">
-                            <input type="radio" value=false name="kind"> B
-                        </label>
-                        <label class="btn btn-primary active">
-                            <input type="radio" value=false name="kind" checked> C
-                        </label>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- add filter later
+            <div> This tool will help you browse features for your biohome. Use the filters to filter down what cards are shown, and use the 'build' button to start building a biohome.</div>
+            <ul> kind of biohome(checkboxes)
+                <li>Biophilic</li>
+                <li>Prefab</li>
+                <li>C</li>
+                <li>D</li>
+            </ul>
+            <div> $-$$$ slider [ ] <br> By kind (energy savings, energy production, etc) </div>
+        -->
         <div class="row">
             <div class="col">
 
@@ -89,16 +62,17 @@
                     </div>
                     <div class="card">
                         <img alt="hi"
-                        src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F34%2F2019%2F08%2F12145839%2Feco-friendly-home-getty-0819.jpg&q=25"
-                        class="
+                            src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F34%2F2019%2F08%2F12145839%2Feco-friendly-home-getty-0819.jpg&q=25"
+                            class="
                         card-img-top">
                         <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
                                 the
                                 card's content.</p>
-                            </div>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
     </div>

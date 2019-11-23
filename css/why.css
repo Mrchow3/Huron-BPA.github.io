@@ -1,22 +1,38 @@
 .num {
-  border: 1px solid black;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  text-align: center;
+  font-size: 5em;
+  padding-right: 0.25em;
+  padding-top: 0;
+  border-right: 2px solid black;
+  font-family: "Courier New";
+  font-weight: 200;
 }
 
 i {
   font-size: 2em;
-  color: red;
+  color: #4fdb42;
 }
 
 .front-page {
   background-image: url("https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F34%2F2019%2F08%2F12145839%2Feco-friendly-home-getty-0819.jpg&q=25");
-  min-height: 80vh;
 }
 
-.mb {
-  padding-bottom: 10em;
+.my-image {
+  color: white;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F34%2F2019%2F08%2F12145839%2Feco-friendly-home-getty-0819.jpg&q=25");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F34%2F2019%2F08%2F12145839%2Feco-friendly-home-getty-0819.jpg&q=25");
+}
+
+.point a h2 {
+  margin-bottom: 0;
+}
+
+.point p {
+  margin-top: 0;
+}
+
+.point a:hover + p, .point p:hover {
+  display: block;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 /*# sourceMappingURL=why.css.map */

@@ -5,21 +5,19 @@
   }
 }
 
+* {
+  font-family: Candara;
+}
+
 body {
   position: relative;
   min-height: 100vh;
-}
-
-.container {
-  padding-top: 3.5em;
-  padding-bottom: 10em;
 }
 
 footer {
   position: absolute;
   width: 100%;
   bottom: 0;
-  padding-top: 1em;
   color: black;
   text-align: center;
   background: white;
@@ -62,6 +60,22 @@ a {
 }
 
 .sticky-top {
-  top: 3.5em;
+  height: 3.5em;
+}
+
+.start {
+  padding-top: 3.5em;
+}
+
+@media (min-width: 768px) {
+  .end {
+    padding-bottom: 8em;
+  }
+}
+
+@media (max-width: 768px) {
+  .end {
+    padding-bottom: 11em;
+  }
 }
 /*# sourceMappingURL=main.css.map */

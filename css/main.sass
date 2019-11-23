@@ -4,18 +4,16 @@
         div.dropdown-menu
             margin: 0
             display: block
-
+*
+    font-family: Candara
 body
     position: relative
     min-height: 100vh;
-.container
-    padding-top: 3.5em // so it doesn't hit nav bar
-    padding-bottom: 10em // so it doesn't hit footer
+
 footer
     position: absolute
     width: 100%
     bottom: 0
-    padding-top: 1em
     color: black
     text-align: center
     background: white
@@ -40,4 +38,13 @@ a
     background-position: center
     background-size: cover
 .sticky-top
-    top: 3.5em
+    height: 3.5em
+
+.start
+    padding-top: 3.5em
+@media (min-width: 768px)
+    .end
+        padding-bottom: 8em
+@media (max-width: 768px)
+    .end
+        padding-bottom: 11em

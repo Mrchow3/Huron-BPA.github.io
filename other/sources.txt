@@ -15,3 +15,4 @@ https://underscorejs.org/
 https://dev.to/teamxenox/how-to-make-dynamic-text-overlays-on-images-dcc
 https://github.com/typeiii/jquery-csv
 https://stackoverflow.com/questions/298503/how-can-you-check-for-a-hash-in-a-url-using-javascript
+https://stackoverflow.com/questions/12574668/change-color-of-sibling-elements-on-hover-using-css
