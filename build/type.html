@@ -35,28 +35,25 @@
             let clean_val = e.target.value.replace(/ |\./, '_')
             if (e.target.checked) {
                 $('.card').each((i, elem) => {
-                    let kind = _.filter(elem.classList, (v, _) => v !== "card")[0]
-
-                    elem = $(elem).find('.filters')
+                    let kind = _.filter(elem.classList, (v, _) => ['biophilic','earthship','prefab','neutral'].indexOf(v) > -1)[0]
                     let mode = '<i class="fas fa-minus"></i>'
                     let targets = _.pick(allValues[kind], e.target.value)
                     if (!_.isEmpty(targets)) {
                         _.each(targets, function (val) {
-                            mode = allValues[kind][val] ? '<i class="fas fa-check"></i>' :
+                            mode = val ? '<i class="fas fa-check"></i>' :
                                 '<i class="fas fa-times"></i>'
-                            $(elem).append(
+                            $(elem).find('.filters').append(
                                 `<p class="${clean_val}"> ${mode} ${e.target.value}</p>`)
-                            allValues[kind]._score += allValues[kind][val] ? 1 : -1
+                            allValues[kind]._score += val ? 1 : -1
                         })
                     } else {
-                        $(elem).append(
+                        $(elem).find('.filters').append(
                             `<p class="${clean_val}"> <i class="fas fa-minus"></i> ${e.target.value}</p>`
-                            )
+                        )
                     }
                 })
                 // add badge to highest ranking
             } else {
-
                 $(`.${clean_val}`).remove()
                 // $('.badge-wrapper').html('')
                 // subtract score of element when it is unchecked
@@ -72,6 +69,8 @@
                 return v[1]._score
             }).reverse()
             $('.badge').empty()
+            $('.card').removeClass('border-dark')
+            $(`.${sortedScores[0][0]}`).addClass('border-dark')
             console.log(`.${sortedScores[0][0]} .badge-wrapper`)
             $(`.${sortedScores[0][0]} .badge-wrapper`).html(
                 '<span class="badge badge-primary">Best choice</span>')
@@ -85,7 +84,7 @@
 <body>
     <header data-load="templates/header.html">
     </header>
-    <div class="container">
+    <div class="container start end">
         <div class="row mt-5">
             First, lets determine the type of biohome that might be right for you.
             Use the filters below to highlight what may be right for you.
@@ -99,57 +98,61 @@
 
             </div>
         </div>
-        <div class="row mt-5 mb-5">
+        <div class="row">
             <div class="col">
 
-            <div class="card-deck">
+                <div class="card-deck">
 
-                <div class="card biophilic">
-                    <img class="card-img-top"
-                        src="https://static.onecms.io/wp-content/uploads/sites/34/2019/08/12145839/eco-friendly-home-getty-0819.jpg">
-                    <div class="card-body">
-                        <h5 class="card-title">Biophilic <span class="badge-wrapper"></span></h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <div class='filters'>
+                    <div class="card biophilic">
+                        <img class="card-img-top"
+                            src="https://static.onecms.io/wp-content/uploads/sites/34/2019/08/12145839/eco-friendly-home-getty-0819.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">Biophilic <span class="badge-wrapper"></span></h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <div class='filters'>
+                            </div>
+                            <a href="/types/biophilic.html" class="btn btn-primary">Read More</a>
                         </div>
-                        <a href="#" class="btn btn-primary">Select this design</a>
+                    </div>
+                    <div class="card earthship"><img class="card-img-top"
+                            src="https://static.onecms.io/wp-content/uploads/sites/34/2019/08/12145839/eco-friendly-home-getty-0819.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">Earthship <span class="badge-wrapper"></span></h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <div class='filters'>
+                            </div>
+                            <a href="/types/earthship.html" class="btn btn-primary">Read more</a>
+                        </div>
+                    </div>
+                    <div class="card prefab"><img class="card-img-top"
+                            src="https://static.onecms.io/wp-content/uploads/sites/34/2019/08/12145839/eco-friendly-home-getty-0819.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">Prefabricated <span class="badge-wrapper"></span></h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <div class='filters'>
+                            </div>
+                            <a href="/types/prefab.html" class="btn btn-primary">Read more</a>
+                        </div>
+                    </div>
+                    <div class="card neutral"><img class="card-img-top"
+                            src="https://static.onecms.io/wp-content/uploads/sites/34/2019/08/12145839/eco-friendly-home-getty-0819.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">Carbon Neutral <span class="badge-wrapper"></span></h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <div class='filters'>
+                            </div>
+                            <a href="/types/neutral.html" class="btn btn-primary">Read more</a>
+                        </div>
                     </div>
                 </div>
-                <div class="card earthship"><img class="card-img-top"
-                        src="https://static.onecms.io/wp-content/uploads/sites/34/2019/08/12145839/eco-friendly-home-getty-0819.jpg">
-                    <div class="card-body">
-                        <h5 class="card-title">Earthship <span class="badge-wrapper"></span></h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <div class='filters'>
-                        </div>
-                        <a href="#" class="btn btn-primary">Select this design</a>
-                    </div>
-                </div>
-                <div class="card prefab"><img class="card-img-top"
-                        src="https://static.onecms.io/wp-content/uploads/sites/34/2019/08/12145839/eco-friendly-home-getty-0819.jpg">
-                    <div class="card-body">
-                        <h5 class="card-title">Prefabricated <span class="badge-wrapper"></span></h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <div class='filters'>
-                        </div>
-                        <a href="#" class="btn btn-primary">Select this design</a>
-                    </div>
-                </div>
-                <div class="card neutral"><img class="card-img-top"
-                        src="https://static.onecms.io/wp-content/uploads/sites/34/2019/08/12145839/eco-friendly-home-getty-0819.jpg">
-                    <div class="card-body">
-                        <h5 class="card-title">Carbon Neutral <span class="badge-wrapper"></span></h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <div class='filters'>
-                        </div>
-                        <a href="#" class="btn btn-primary">Select this design</a>
-                    </div>
-                </div>
-            </div>
             </div>
 
         </div>

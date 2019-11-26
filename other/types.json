@@ -23,7 +23,11 @@
         "popcorn": true
     },
     "neutral": {
-        "_score": 0
+        "_score": 0,
+        "water heater": false,
+        "pineapple": false,
+        "gas stove": true,
+        "popcorn": true
     },
     "prefab": {
         "_score": 0
