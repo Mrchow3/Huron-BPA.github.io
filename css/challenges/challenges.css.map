@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,WAAW,CAAC;EACR,UAAU,EAAE,IAAI;EAChB,gBAAgB,EAAE,yLAAyL;CAAG",
+    "mappings": "AAAA,AAAA,WAAW,CAAC;EACR,UAAU,EAAE,IAAI;EAChB,gBAAgB,EAAE,4BAA4B;CAAG",
     "sources": [
         "challenges.sass"
     ],
