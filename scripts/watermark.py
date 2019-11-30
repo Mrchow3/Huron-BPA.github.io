@@ -32,7 +32,7 @@ for row in items:
             # citation = citation.replace('"',"\\\"",-1)
             part1 = f'magick identify -format %w,%h "{file_path}"'
             part2 = 'magick convert -background "#00000080" -fill white -gravity center \
--font Times-New-Roman -size {}x -pointsize {}  caption:"{}" \
+-font Times-Roman -size {}x -pointsize {}  caption:"{}" \
 "{}" +swap -gravity North -composite "{}"'
             out = subprocess.check_output(part1, shell=True)
             num1, num2 = out.decode().split(',')
