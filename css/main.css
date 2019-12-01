@@ -14,22 +14,31 @@ body {
   min-height: 100vh;
 }
 
+.navbar-dark {
+  color: #183917 !important;
+  opacity: 1;
+}
+
+.bg-dark {
+  background: #183917 !important;
+}
+
 footer {
   position: absolute;
   width: 100%;
   bottom: 0;
-  color: black;
+  color: white;
   text-align: center;
-  background: white;
+  background: #081140;
 }
 
 footer i {
   font-size: 2em;
-  color: black;
+  color: white;
 }
 
 footer i:hover {
-  color: purple;
+  color: #92c8e0;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -41,6 +50,7 @@ a {
 .navbar {
   -webkit-transition: 1s;
   transition: 1s;
+  background: green;
 }
 
 .center {
@@ -92,7 +102,7 @@ a {
 }
 
 .header-text {
-  background: rgba(66, 65, 65, 0.89);
+  background: rgb(65, 65, 65, 0.8);
   padding: .5em 1em .5em 1em;
   border-radius: .5em;
   color: white;

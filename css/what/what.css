@@ -1,4 +1,5 @@
 .front-page {
   background-image: url("/assets/rainwater_home.jpg");
+  min-height: 80vh;
 }
 /*# sourceMappingURL=what.css.map */
