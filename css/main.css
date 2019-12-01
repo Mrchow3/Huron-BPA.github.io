@@ -102,7 +102,7 @@ a {
 }
 
 .header-text {
-  background: rgb(65, 65, 65, 0.8);
+  background: rgba(66, 65, 65, 0.89);
   padding: .5em 1em .5em 1em;
   border-radius: .5em;
   color: white;

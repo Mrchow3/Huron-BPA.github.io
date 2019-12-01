@@ -15,7 +15,7 @@
 }
 
 .jumbotron {
-  background: white;
+  background: teal;
 }
 
 #fp-nav ul li a span {
@@ -25,7 +25,6 @@
 .carousel-header {
   position: absolute;
   bottom: 70%;
-  width: 100%;
   background: inherit;
   background-clip: text;
   text-align: center;
@@ -34,5 +33,25 @@
 
 .rounded-corner {
   border-radius: 3em;
+}
+
+.a {
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#9cc6d9));
+  background: linear-gradient(180deg, white 0%, #9cc6d9 100%);
+}
+
+.b {
+  background: -webkit-gradient(linear, left bottom, left top, from(white), to(#9cc6d9));
+  background: linear-gradient(0deg, white 0%, #9cc6d9 100%);
+}
+
+.c {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, white), to(#9cd9a2));
+  background: linear-gradient(180deg, white 10%, #9cd9a2 100%);
+}
+
+.d {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, white), to(#9cd9a2));
+  background: linear-gradient(0deg, white 10%, #9cd9a2 100%);
 }
 /*# sourceMappingURL=index.css.map */
