@@ -6,7 +6,7 @@
 
 .info {
   padding-top: 20%;
-  border-radius: 1em;
+  border-radius: 3em;
   font-size: 3em;
 }
 
@@ -15,24 +15,30 @@
 }
 
 .jumbotron {
-  background: teal;
+  background: white;
+}
+
+.what-jumbotron {
+  background: #0E4365 !important;
+  color: whitesmoke;
+}
+
+.who-jumbotron {
+  background: #1F6CB3 !important;
+  color: whitesmoke;
+}
+
+.why-jumbotron {
+  background: #11542C !important;
+  color: whitesmoke;
+}
+
+.what-jumbotron .why-jumbotron .who-jumbotron {
+  color: whitesmoke;
 }
 
 #fp-nav ul li a span {
   background: white;
-}
-
-.carousel-header {
-  position: absolute;
-  bottom: 70%;
-  background: inherit;
-  background-clip: text;
-  text-align: center;
-  z-index: 20;
-}
-
-.rounded-corner {
-  border-radius: 3em;
 }
 
 .a {
