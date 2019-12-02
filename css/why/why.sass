@@ -1,18 +1,15 @@
 .num
-    font-size: 3em
-    padding-right: 0.25em
-    padding-top: 0
-    border-right: 2px solid black
+    font-size: 2em
+    text-align: center
     font-family: "Courier New"
     font-weight: 200
-@media (min-width: 768px)
-    .num
-        font-size: 5em
 .environment
     i
     font-size: 2em
     color: #F7F7F7
-
+    min-height: 80vh
+    .num
+        text-decoration: underline
 .front-page
     background-image: url('/assets/airflow_home.jpg')
 .my-image
@@ -27,6 +24,13 @@
     a:hover + p, p:hover
         display: block
         transition: 1s
-
+@media (min-width: 768px)
+    .right-border
+        border-right: 2px solid white
+    .environment
+        .num
+            text-decoration: none
 // .point p
 //     // display: none
+.jumbotron
+    color: white

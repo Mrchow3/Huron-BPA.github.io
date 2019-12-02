@@ -1,21 +1,18 @@
 .num {
-  font-size: 3em;
-  padding-right: 0.25em;
-  padding-top: 0;
-  border-right: 2px solid black;
+  font-size: 2em;
+  text-align: center;
   font-family: "Courier New";
   font-weight: 200;
-}
-
-@media (min-width: 768px) {
-  .num {
-    font-size: 5em;
-  }
 }
 
 .environment {
   font-size: 2em;
   color: #F7F7F7;
+  min-height: 80vh;
+}
+
+.environment .num {
+  text-decoration: underline;
 }
 
 .front-page {
@@ -39,5 +36,18 @@
   display: block;
   -webkit-transition: 1s;
   transition: 1s;
+}
+
+@media (min-width: 768px) {
+  .right-border {
+    border-right: 2px solid white;
+  }
+  .environment .num {
+    text-decoration: none;
+  }
+}
+
+.jumbotron {
+  color: white;
 }
 /*# sourceMappingURL=why.css.map */

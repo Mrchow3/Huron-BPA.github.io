@@ -4,7 +4,8 @@
 }
 
 .what-jumbotron {
-  background: #0C4122 !important;
-  color: whitesmoke;
+  border-radius: 15px;
+  background: #0C4122;
+  color: white;
 }
 /*# sourceMappingURL=challenges.css.map */

@@ -23,6 +23,11 @@ for row in items:
     ending = row["url"].split('.')[-1].lower()
     file_path = join(website, "assets", row["filename"] + f'.{ending or "jpg"}')
     file_path_caption = join(website, "assets", row["filename"] + f'_caption.{ending or "jpg"}')
+    try:
+        os.remove(file_path)
+        os.remove(file_path_caption)
+    except Exception:
+        pass
     citation = row['citation']
     with open(file_path, 'wb') as write:
         write.write(requests.get(row["url"]).content)
@@ -32,7 +37,7 @@ for row in items:
             # citation = citation.replace('"',"\\\"",-1)
             part1 = f'magick identify -format %w,%h "{file_path}"'
             part2 = 'magick convert -background "#00000080" -fill white -gravity center \
--font Times-Roman -size {}x -pointsize {}  caption:"{}" \
+-font Times-New-Roman -size {}x -pointsize {}  caption:"{}" \
 "{}" +swap -gravity North -composite "{}"'
             out = subprocess.check_output(part1, shell=True)
             num1, num2 = out.decode().split(',')
